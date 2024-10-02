@@ -1,6 +1,6 @@
 name: action-megacmd
 description: Wraps the megacmd CLI to enable interaction with MEGA.
-author: Difegue
+author: Mamami-Digital
 branding:
   color: red
   icon: upload-cloud
