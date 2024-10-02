@@ -13,7 +13,7 @@ To download a file using MEGAcmd. In this case we are downloading a file specifi
 
 ```yaml
 - name: Download
-        uses: Difegue/action-megacmd@master
+        uses: Mamami-Digital/action-megacmd@master
         with:
           args: get https://mega.nz/#F!ABcD1E2F!gHiJ23k-LMno45PqrSTUvw /path/to/local/folder
 ```
@@ -22,7 +22,7 @@ To upload a file using MEGAcmd:
 
 ```yaml
 - name: Upload 
-        uses: Difegue/action-megacmd@master
+        uses: Mamami-Digital/action-megacmd@master
         with:
           args: put /path/to/local/folder /exportedstuff/
         env:
