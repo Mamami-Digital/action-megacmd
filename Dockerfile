@@ -1,21 +1,16 @@
 FROM debian:buster
 
-LABEL version="1.0.0"
-LABEL repository="http://github.com/Difegue/action-megacmd"
-LABEL homepage="http://github.com/Difegue/action-megacmd"
-LABEL maintainer="sugoi@cock.li"
+LABEL version="1.0.1"
+LABEL repository="http://github.com/Mamami-Digital/action-megacmd"
+LABEL homepage="http://github.com/Mamami-Digital/action-megacmd"
+LABEL maintainer="assistenza@mamami.digital"
 
 LABEL com.github.actions.name="GitHub Action for MEGA"
 LABEL com.github.actions.description="Wraps the megacmd CLI to enable interaction with MEGA."
 LABEL com.github.actions.icon="upload-cloud"
 LABEL com.github.actions.color="red"
 
-RUN apt-get update && apt-get install curl gnupg2 -y && \
-curl https://mega.nz/linux/MEGAsync/Debian_10.0/amd64/megacmd-Debian_10.0_amd64.deb --output megacmd.deb && \
-echo path-include /usr/share/doc/megacmd/* > /etc/dpkg/dpkg.cfg.d/docker && \
-apt install ./megacmd.deb -y && \
-apt-get remove -y curl && \
-apt-get clean
+RUN wget https://mega.nz/linux/repo/Debian_10.0/amd64/megacmd-Debian_10.0_amd64.deb && apt install megacmd-Debian_10.0_amd64.deb -y
 
 ENV USERNAME NOBODY
 ENV PASSWORD CHANGEME
